@@ -1,0 +1,64 @@
+<mvc:View
+	controllerName="com.ntt.esrabarut.zpp002serino.controller.View1"
+    displayBlock="true"
+	xmlns:l="sap.ui.layout"
+
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns="sap.m"
+	xmlns:ndc="sap.ndc"
+    id="ViewID">
+    <Page
+		id="page"
+		title="{i18n>title}"
+	>
+		<Panel headerText="PANEL HEADER" id="panel1">
+			<content>
+				<l:VerticalLayout id="v1" class="sapUiContentPadding">
+					<l:HorizontalLayout id="h1" class="sapUiContentPadding">
+					<Text id="text1header" text="1. barcode (QR):"  /> <!-- BAŞLIKKKK-->
+						<!-- GELEN DEGER TEXT-->
+					<Input id="input1" class="sapUiTinyMarginBegin" value="{json/bebek}" />
+						<ndc:BarcodeScannerButton
+			                    id="BB1"
+		                    	scanSuccess="onScanSuccess($event, 'BB1')"
+			                    scanFail="onScanError"
+		                    	inputLiveUpdate="onScanLiveupdate"
+			                    dialogTitle="Barcode Scanner Button Sample"
+                                
+		                    />
+                         <Text id="text1" text="{/IvBarkod1}" class="sapUiTinyMarginBegin" visible="false"/>
+			            <!-- "onScanSuccess($event, 'BB1')"  -->
+						
+					</l:HorizontalLayout>
+					
+					<l:HorizontalLayout id="h2" class="sapUiContentPadding">
+					<Text id="text2header" text="2. barcode (QR):"  /> 
+						
+					<Input id="input2" class="sapUiTinyMarginBegin" value="{json/>bebek2}" />
+						<ndc:BarcodeScannerButton
+			                    id="BB2"
+		                    	scanSuccess="onScanSuccess2"
+			                    scanFail="onScanError"
+		                    	inputLiveUpdate="onScanLiveupdate2"
+			                    dialogTitle="Barcode Scanner Button Sample"
+                                
+		                    />
+                         <Text id="text2" text="{/IvBarkod2}" class="sapUiTinyMarginBegin" visible="false"/>
+			         
+				
+					</l:HorizontalLayout>
+			
+					<Button id="sendbutton"
+						text="Send"
+						type="Emphasized"
+						class="sapUiSmallMarginEnd"
+						width="auto"
+						press="onPressSend"
+					
+					/>
+				</l:VerticalLayout>
+			</content>
+			
+		</Panel>
+	</Page>
+</mvc:View>
