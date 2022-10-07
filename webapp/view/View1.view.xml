@@ -39,7 +39,7 @@
 			                    id="BB2"
 		                    	scanSuccess="onScanSuccess2"
 			                    scanFail="onScanError"
-		                    	inputLiveUpdate="onScanLiveupdate2"
+		                    	inputLiveUpdate="onScanLiveupdate"
 			                    dialogTitle="Barcode Scanner Button Sample"
                                 
 		                    />
