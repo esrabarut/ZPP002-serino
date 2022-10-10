@@ -11,30 +11,30 @@
 		id="page"
 		title="{i18n>title}"
 	>
-		<Panel headerText="PANEL HEADER" id="panel1">
+		<Panel headerText="{i18n>okut}" id="panel1">
 			<content>
 				<l:VerticalLayout id="v1" class="sapUiContentPadding">
 					<l:HorizontalLayout id="h1" class="sapUiContentPadding">
-					<Text id="text1header" text="1. barcode (QR):"  /> <!-- BAŞLIKKKK-->
+					<Text id="text1header" text="{i18n>barkod1}"  /> <!-- BAŞLIKKKK-->
 						<!-- GELEN DEGER TEXT-->
-					<Input id="input1" class="sapUiTinyMarginBegin" value="{json/bebek}" />
+					<Input id="input1" class="sapUiTinyMarginBegin"  />
 						<ndc:BarcodeScannerButton
 			                    id="BB1"
-		                    	scanSuccess="onScanSuccess($event, 'BB1')"
+		                    	scanSuccess="onScanSuccess"
 			                    scanFail="onScanError"
 		                    	inputLiveUpdate="onScanLiveupdate"
 			                    dialogTitle="Barcode Scanner Button Sample"
                                 
 		                    />
-                         <Text id="text1" text="{/IvBarkod1}" class="sapUiTinyMarginBegin" visible="false"/>
+                         <Text id="text1" text="" class="sapUiTinyMarginBegin" visible="false"/>
 			            <!-- "onScanSuccess($event, 'BB1')"  -->
 						
 					</l:HorizontalLayout>
 					
 					<l:HorizontalLayout id="h2" class="sapUiContentPadding">
-					<Text id="text2header" text="2. barcode (QR):"  /> 
+					<Text id="text2header" text="{i18n>barkod2}"  /> 
 						
-					<Input id="input2" class="sapUiTinyMarginBegin" value="{json/>bebek2}" />
+					<Input id="input2" class="sapUiTinyMarginBegin"  />
 						<ndc:BarcodeScannerButton
 			                    id="BB2"
 		                    	scanSuccess="onScanSuccess2"
@@ -43,13 +43,13 @@
 			                    dialogTitle="Barcode Scanner Button Sample"
                                 
 		                    />
-                         <Text id="text2" text="{/IvBarkod2}" class="sapUiTinyMarginBegin" visible="false"/>
+                         <Text id="text2" text="" class="sapUiTinyMarginBegin" visible="false"/>
 			         
 				
 					</l:HorizontalLayout>
 			
 					<Button id="sendbutton"
-						text="Send"
+						text="{i18n>gonder}"
 						type="Emphasized"
 						class="sapUiSmallMarginEnd"
 						width="auto"
